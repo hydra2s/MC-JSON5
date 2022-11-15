@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.hydra2s.mc_json5.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": ["JSON5Mixin"],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
