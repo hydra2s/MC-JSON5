@@ -27,8 +27,8 @@ import java.util.*;
 
 @Mixin(JsonHelper.class)
 public class JSON5Mixin {
-    //@Shadow private static final Gson GSON = null;
-    @Unique private static final Json5 JSON5 = Json5.builder(options -> options.allowInvalidSurrogate().quoteSingle().prettyPrinting().build());
+    @Unique private static final Json5 JSON5Reader = Json5.builder(options -> options.allowInvalidSurrogate().quoteSingle().prettyPrinting().build());
+    @Unique private static final Json5 JSON5Writer = Json5.builder(options -> options.build());
 
     /**
      * @author
@@ -37,13 +37,10 @@ public class JSON5Mixin {
     @Overwrite @Nullable
     public static <T> T deserialize(Gson gson, Reader reader, Class<T> type, boolean lenient) {
         try {
-            if (!lenient) {
-                JsonReader jsonReader = new JsonReader(reader);
-                jsonReader.setLenient(false);
-                return gson.getAdapter(type).read(jsonReader);
-            } else {
-                return (T)(new Gson().fromJson(JSON5.serialize(JSON5.parse(reader)), type));
-            }
+            Reader reader_ = lenient ? new StringReader(JSON5Writer.serialize(JSON5Reader.parse(reader))) : reader;
+            JsonReader jsonReader = new JsonReader(reader_);
+            jsonReader.setLenient(true);
+            return gson.getAdapter(type).read(jsonReader);
         } catch (IOException var5) {
             throw new JsonParseException(var5);
         }
@@ -56,13 +53,10 @@ public class JSON5Mixin {
     @Overwrite @Nullable
     public static <T> T deserialize(Gson gson, Reader reader, TypeToken<T> typeToken, boolean lenient) {
         try {
-            if (!lenient) {
-                JsonReader jsonReader = new JsonReader(reader);
-                jsonReader.setLenient(false);
-                return gson.getAdapter(typeToken).read(jsonReader);
-            } else {
-                return (T)(new Gson().fromJson(JSON5.serialize(JSON5.parse(reader)), typeToken.getClass()));
-            }
+            Reader reader_ = lenient ? new StringReader(JSON5Writer.serialize(JSON5Reader.parse(reader))) : reader;
+            JsonReader jsonReader = new JsonReader(reader_);
+            jsonReader.setLenient(true);
+            return gson.getAdapter(typeToken).read(jsonReader);
         } catch (IOException var5) {
             throw new JsonParseException(var5);
         }
