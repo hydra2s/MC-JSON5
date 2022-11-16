@@ -5,3 +5,7 @@ Add JSON5 parsing in vanilla stuff (we doesn't support mods, which uses GSON dir
 - https://json5.org/
 - https://github.com/json5/json5
 - https://github.com/marhali/json5-java
+
+Download links: 
+
+- https://www.curseforge.com/minecraft/mc-mods/mc-json5-patch
