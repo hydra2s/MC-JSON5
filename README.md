@@ -22,3 +22,8 @@ Add JSON5 parsing in vanilla stuff (we doesn't support mods, which uses GSON dir
 - https://github.com/hydra2s/reasonable-sorting
 - **https://github.com/hydra2s/nbt-crafting** (for future releases)
 - **https://github.com/hydra2s/polymorph** (highly recommended)
+
+#### Our mods and data packs: 
+
+- https://www.curseforge.com/minecraft/mc-mods/crafting-recipes-overhaul-fabric
+- https://www.curseforge.com/minecraft/texture-packs/crafting-recipes-overhaul
