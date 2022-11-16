@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "crop",
+  "id": "mc_json5",
   "version": "${version}",
   "name": "Minecraft JSON5",
   "description": "This is generic mod...",
