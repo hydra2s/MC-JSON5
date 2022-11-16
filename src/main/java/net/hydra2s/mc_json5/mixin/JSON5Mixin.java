@@ -54,8 +54,8 @@ public class JSON5Mixin {
             }
 
             //
-            LOGGER.info("DEBUG JSON: ");
-            LOGGER.info(json5);
+            //LOGGER.info("DEBUG JSON: ");
+            //LOGGER.info(json5);
         }
 
         //
@@ -64,7 +64,7 @@ public class JSON5Mixin {
             JsonReader jsonReader = new JsonReader(new StringReader(json5));
             jsonReader.setLenient(true);
             return gson.getAdapter(type).read(jsonReader);
-        } catch (IOException var5) {
+        } catch (JsonParseException var5) {
             try {
                 // if still malformed, try parse as JSON5
                 try {
@@ -74,8 +74,8 @@ public class JSON5Mixin {
                 }
 
                 //
-                LOGGER.info("DEBUG JSON: ");
-                LOGGER.info(json5);
+                //LOGGER.info("DEBUG JSON: ");
+                //LOGGER.info(json5);
 
                 // if still malformed, try parse as JSON5
                 JsonReader jsonReader = new JsonReader(new StringReader(json5));
@@ -105,8 +105,8 @@ public class JSON5Mixin {
             }
 
             //
-            LOGGER.info("DEBUG JSON: ");
-            LOGGER.info(json5);
+            //LOGGER.info("DEBUG JSON: ");
+            //LOGGER.info(json5);
         }
 
         //
@@ -115,7 +115,7 @@ public class JSON5Mixin {
             JsonReader jsonReader = new JsonReader(new StringReader(json5));
             jsonReader.setLenient(true);
             return gson.getAdapter(typeToken).read(jsonReader);
-        } catch (IOException var5) {
+        } catch (JsonParseException var5) {
             try {
                 // if still malformed, try parse as JSON5
                 try {
@@ -125,8 +125,8 @@ public class JSON5Mixin {
                 }
 
                 //
-                LOGGER.info("DEBUG JSON: ");
-                LOGGER.info(json5);
+                //LOGGER.info("DEBUG JSON: ");
+                //LOGGER.info(json5);
 
                 // if still malformed, try parse as JSON5
                 JsonReader jsonReader = new JsonReader(new StringReader(json5));
