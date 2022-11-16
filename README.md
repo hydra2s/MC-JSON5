@@ -11,6 +11,7 @@ Add JSON5 parsing in vanilla stuff (we doesn't support mods, which uses GSON dir
 #### Download links: 
 
 - https://www.curseforge.com/minecraft/mc-mods/mc-json5-patch
+- https://github.com/hydra2s/MC-JSON5/releases/tag/Experimental-4
 
 #### Ported mods for **22w45a**:
 
