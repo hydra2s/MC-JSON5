@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    include(implementation "de.marhali:json5-java:2.0.0")
+    include(modImplementation "de.marhali:json5-java:2.0.0")
 }
 
 dependencies {
