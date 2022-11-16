@@ -32,3 +32,5 @@ Add JSON5 parsing in vanilla stuff (we doesn't support mods, which uses GSON dir
 
 - https://www.curseforge.com/minecraft/mc-mods/crafting-recipes-overhaul-fabric
 - https://www.curseforge.com/minecraft/texture-packs/crafting-recipes-overhaul
+- https://github.com/hydra2s/crafting-recipes-overhaul
+
